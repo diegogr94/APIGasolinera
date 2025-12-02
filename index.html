@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Gasolineras</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>⛽ Precio Carburantes</h1>
+        <p>Consulta precios y horarios en tiempo real</p>
+    </header>
+
+    <div class="contenedor-principal">
+        <aside class="panel-control">
+            <div class="grupo-input">
+                <label for="select-provincia">1. Provincia</label>
+                <select id="select-provincia">
+                    <option value="">Cargando...</option>
+                </select>
+            </div>
+
+            <div class="grupo-input">
+                <label for="select-municipio">2. Municipio</label>
+                <select id="select-municipio" disabled>
+                    <option value="">Selecciona Provincia primero</option>
+                </select>
+            </div>
+
+            <div class="grupo-input">
+                <label for="select-combustible">3. Tipo de Combustible</label>
+                <select id="select-combustible">
+                    <option value="todos">Todos los combustibles</option>
+                    <option value="Precio Gasolina 95 E5">Gasolina 95</option>
+                    <option value="Precio Gasolina 98 E5">Gasolina 98</option>
+                    <option value="Precio Gasoleo A">Diésel (A)</option>
+                    <option value="Precio Gasoleo Premium">Diésel Premium</option>
+                    <option value="Precio GLP">GLP</option>
+                </select>
+            </div>
+
+            <div class="grupo-checkbox">
+                <input type="checkbox" id="check-abiertas">
+                <label for="check-abiertas">Mostrar solo abiertas ahora</label>
+            </div>
+
+            <button id="btn-buscar">🔍 Buscar Gasolineras</button>
+        </aside>
+
+        <main class="panel-resultados">
+            <div id="contenedor-tarjetas">
+                <p class="mensaje-inicio">Selecciona una zona para ver los resultados.</p>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
